@@ -16,6 +16,6 @@ with web and AI/ML as some side quests...
 ---
 
 WIT Lead · TinkerHub - 
-Opening doors or girls who haven't found theirs yet
+Opening doors for girls who haven't found theirs yet
 
 `c` `c++` `python` `java` `javascript` `node.js` `express.js` `next.js` `opencv` `numpy` `pandas` `mysql` `postgresql` `mongodb` `raspberry pi` `arduino` `esp32`
