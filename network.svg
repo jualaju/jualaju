@@ -1,0 +1,104 @@
+<svg viewBox="0 0 720 190" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      text { font-family: ui-monospace, SFMono-Regular, 'Cascadia Mono', monospace; }
+
+      @media (prefers-color-scheme: dark) {
+        .e-main { stroke: rgba(210,210,210,0.18); }
+        .e      { stroke: rgba(210,210,210,0.10); }
+        .n-root      { fill: rgba(230,230,230,1);    }
+        .n-primary   { fill: rgba(210,210,210,0.90); }
+        .n-exploring { fill: rgba(195,155,70,0.90);  }
+        .n-secondary { fill: rgba(110,110,110,0.70); }
+        .n-leaf      { fill: rgba(155,155,155,0.75); }
+        .n-deep      { fill: rgba(100,100,100,0.60); }
+        .l-root      { fill: rgba(230,230,230,0.90); }
+        .l-primary   { fill: rgba(210,210,210,0.75); }
+        .l-exploring { fill: rgba(195,155,70,0.85);  }
+        .l-secondary { fill: rgba(110,110,110,0.62); }
+        .l-leaf      { fill: rgba(155,155,155,0.70); }
+        .l-deep      { fill: rgba(100,100,100,0.52); }
+        .pt          { fill: rgba(210,210,210,0.40); }
+      }
+      @media (prefers-color-scheme: light) {
+        .e-main { stroke: rgba(40,40,40,0.16); }
+        .e      { stroke: rgba(40,40,40,0.09); }
+        .n-root      { fill: rgba(15,15,15,1);        }
+        .n-primary   { fill: rgba(35,35,35,0.90);     }
+        .n-exploring { fill: rgba(155,110,25,0.90);   }
+        .n-secondary { fill: rgba(165,165,165,0.70);  }
+        .n-leaf      { fill: rgba(105,105,105,0.75);  }
+        .n-deep      { fill: rgba(170,170,170,0.60);  }
+        .l-root      { fill: rgba(15,15,15,0.90);     }
+        .l-primary   { fill: rgba(35,35,35,0.75);     }
+        .l-exploring { fill: rgba(155,110,25,0.85);   }
+        .l-secondary { fill: rgba(165,165,165,0.65);  }
+        .l-leaf      { fill: rgba(105,105,105,0.70);  }
+        .l-deep      { fill: rgba(170,170,170,0.55);  }
+        .pt          { fill: rgba(40,40,40,0.28);     }
+      }
+    </style>
+
+    <!-- edge paths (reused for animateMotion) -->
+    <path id="p01"  d="M65,95  L215,42"  />
+    <path id="p02"  d="M65,95  L215,148" />
+    <path id="p03"  d="M65,95  L215,95"  />
+    <path id="p14"  d="M215,42 L400,14"  />
+    <path id="p15"  d="M215,42 L400,50"  />
+    <path id="p16"  d="M215,42 L400,90"  />
+    <path id="p27"  d="M215,148 L400,125"/>
+    <path id="p28"  d="M215,148 L400,166"/>
+    <path id="p49"  d="M400,14 L580,28"  />
+    <path id="p510" d="M400,50 L580,62"  />
+  </defs>
+
+  <!-- edges -->
+  <use href="#p01"  fill="none" stroke-width="0.6" class="e-main"/>
+  <use href="#p02"  fill="none" stroke-width="0.6" class="e-main"/>
+  <use href="#p03"  fill="none" stroke-width="0.5" class="e-main"/>
+  <use href="#p14"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p15"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p16"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p27"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p28"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p49"  fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p510" fill="none" stroke-width="0.5" class="e"/>
+
+  <!-- particles -->
+  <circle r="1.3" class="pt"><animateMotion dur="3.6s" begin="0s"    repeatCount="indefinite"><mpath href="#p01"/></animateMotion></circle>
+  <circle r="1.3" class="pt"><animateMotion dur="4.1s" begin="-1.2s" repeatCount="indefinite"><mpath href="#p02"/></animateMotion></circle>
+  <circle r="1.3" class="pt"><animateMotion dur="2.9s" begin="-0.6s" repeatCount="indefinite"><mpath href="#p03"/></animateMotion></circle>
+  <circle r="1.1" class="pt"><animateMotion dur="3.0s" begin="-0.9s" repeatCount="indefinite"><mpath href="#p14"/></animateMotion></circle>
+  <circle r="1.1" class="pt"><animateMotion dur="3.3s" begin="-1.6s" repeatCount="indefinite"><mpath href="#p15"/></animateMotion></circle>
+  <circle r="1.1" class="pt"><animateMotion dur="3.8s" begin="-0.4s" repeatCount="indefinite"><mpath href="#p16"/></animateMotion></circle>
+  <circle r="1.1" class="pt"><animateMotion dur="3.5s" begin="-1.3s" repeatCount="indefinite"><mpath href="#p27"/></animateMotion></circle>
+  <circle r="1.1" class="pt"><animateMotion dur="4.3s" begin="-2.1s" repeatCount="indefinite"><mpath href="#p28"/></animateMotion></circle>
+  <circle r="1.0" class="pt"><animateMotion dur="3.1s" begin="-0.7s" repeatCount="indefinite"><mpath href="#p49"/></animateMotion></circle>
+  <circle r="1.0" class="pt"><animateMotion dur="3.4s" begin="-1.9s" repeatCount="indefinite"><mpath href="#p510"/></animateMotion></circle>
+
+  <!-- nodes -->
+  <circle cx="65"  cy="95"  r="5.5" class="n-root"/>
+  <circle cx="215" cy="42"  r="4.0" class="n-primary"/>
+  <circle cx="215" cy="148" r="3.0" class="n-exploring"/>
+  <circle cx="215" cy="95"  r="2.0" class="n-secondary"/>
+  <circle cx="400" cy="14"  r="2.5" class="n-leaf"/>
+  <circle cx="400" cy="50"  r="2.5" class="n-leaf"/>
+  <circle cx="400" cy="90"  r="2.0" class="n-leaf"/>
+  <circle cx="400" cy="125" r="2.0" class="n-leaf"/>
+  <circle cx="400" cy="166" r="2.0" class="n-leaf"/>
+  <circle cx="580" cy="28"  r="1.8" class="n-deep"/>
+  <circle cx="580" cy="62"  r="1.8" class="n-deep"/>
+
+  <!-- labels -->
+  <text x="74"  y="99"  font-size="12"   font-weight="500" class="l-root">jual aju</text>
+  <text x="224" y="46"  font-size="10.5"               class="l-primary">systems &amp; networking</text>
+  <text x="224" y="152" font-size="10.5"               class="l-exploring">cybersecurity</text>
+  <text x="224" y="99"  font-size="10"                 class="l-secondary">web · ai/ml</text>
+  <text x="409" y="18"  font-size="10"                 class="l-leaf">tcp/ip · protocols</text>
+  <text x="409" y="54"  font-size="10"                 class="l-leaf">os internals</text>
+  <text x="409" y="94"  font-size="10"                 class="l-leaf">linux kernel</text>
+  <text x="409" y="129" font-size="10"                 class="l-leaf">network security</text>
+  <text x="409" y="170" font-size="10"                 class="l-leaf">ctf · exploitation</text>
+  <text x="588" y="32"  font-size="9.5"                class="l-deep">packet analysis</text>
+  <text x="588" y="66"  font-size="9.5"                class="l-deep">system calls</text>
+</svg>
