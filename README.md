@@ -2,15 +2,12 @@
 
 ### CS UNDERGRAD
 
-Interested in understanding how systems work under the hood —
+Interested in understanding how systems work under the hood,
 from **network protocols** and **OS internals** to the infrastructure
 and hardware underneath.
 
 Currently exploring **software engineering, systems, cybersecurity,
 AI/ML systems, and distributed computing** through hands-on projects.
-
-Building things, breaking things, figuring out why they work,
-and occasionally wondering why they don't.
 
 <br>
 
@@ -42,15 +39,6 @@ and GPU code generation with Triton.
 **AI-Centric Cyber-Physical Systems**  
 Distributed edge systems combining IoT, real-time data pipelines,
 and ML inference across heterogeneous hardware.
-
----
-
-
-**Campus Lead · TinkerHub**
-
-Opening doors for girls who haven't found theirs yet —
-through hands-on learning, technical communities, and building things
-together.
 
 ---
 
