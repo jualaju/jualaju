@@ -1,104 +1,324 @@
-<svg viewBox="0 0 720 190" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      text { font-family: ui-monospace, SFMono-Regular, 'Cascadia Mono', monospace; }
+      text {
+        font-family: ui-monospace, SFMono-Regular, 'Cascadia Mono', monospace;
+      }
 
       @media (prefers-color-scheme: dark) {
         .e-main { stroke: rgba(210,210,210,0.18); }
         .e      { stroke: rgba(210,210,210,0.10); }
-        .n-root      { fill: rgba(230,230,230,1);    }
+
+        .n-root      { fill: rgba(230,230,230,1); }
         .n-primary   { fill: rgba(210,210,210,0.90); }
-        .n-exploring { fill: rgba(195,155,70,0.90);  }
-        .n-secondary { fill: rgba(110,110,110,0.70); }
-        .n-leaf      { fill: rgba(155,155,155,0.75); }
-        .n-deep      { fill: rgba(100,100,100,0.60); }
+        .n-focus     { fill: rgba(195,155,70,0.90); }
+        .n-secondary { fill: rgba(135,135,135,0.75); }
+        .n-leaf      { fill: rgba(155,155,155,0.70); }
+        .n-deep      { fill: rgba(100,100,100,0.55); }
+
         .l-root      { fill: rgba(230,230,230,0.90); }
         .l-primary   { fill: rgba(210,210,210,0.75); }
-        .l-exploring { fill: rgba(195,155,70,0.85);  }
-        .l-secondary { fill: rgba(110,110,110,0.62); }
-        .l-leaf      { fill: rgba(155,155,155,0.70); }
-        .l-deep      { fill: rgba(100,100,100,0.52); }
-        .pt          { fill: rgba(210,210,210,0.40); }
+        .l-focus     { fill: rgba(195,155,70,0.90); }
+        .l-secondary { fill: rgba(135,135,135,0.65); }
+        .l-leaf      { fill: rgba(155,155,155,0.68); }
+        .l-deep      { fill: rgba(100,100,100,0.50); }
+
+        .pt { fill: rgba(210,210,210,0.40); }
       }
+
       @media (prefers-color-scheme: light) {
         .e-main { stroke: rgba(40,40,40,0.16); }
         .e      { stroke: rgba(40,40,40,0.09); }
-        .n-root      { fill: rgba(15,15,15,1);        }
-        .n-primary   { fill: rgba(35,35,35,0.90);     }
-        .n-exploring { fill: rgba(155,110,25,0.90);   }
-        .n-secondary { fill: rgba(165,165,165,0.70);  }
-        .n-leaf      { fill: rgba(105,105,105,0.75);  }
-        .n-deep      { fill: rgba(170,170,170,0.60);  }
-        .l-root      { fill: rgba(15,15,15,0.90);     }
-        .l-primary   { fill: rgba(35,35,35,0.75);     }
-        .l-exploring { fill: rgba(155,110,25,0.85);   }
-        .l-secondary { fill: rgba(165,165,165,0.65);  }
-        .l-leaf      { fill: rgba(105,105,105,0.70);  }
-        .l-deep      { fill: rgba(170,170,170,0.55);  }
-        .pt          { fill: rgba(40,40,40,0.28);     }
+
+        .n-root      { fill: rgba(15,15,15,1); }
+        .n-primary   { fill: rgba(35,35,35,0.90); }
+        .n-focus     { fill: rgba(155,110,25,0.90); }
+        .n-secondary { fill: rgba(145,145,145,0.70); }
+        .n-leaf      { fill: rgba(105,105,105,0.70); }
+        .n-deep      { fill: rgba(170,170,170,0.55); }
+
+        .l-root      { fill: rgba(15,15,15,0.90); }
+        .l-primary   { fill: rgba(35,35,35,0.75); }
+        .l-focus     { fill: rgba(155,110,25,0.90); }
+        .l-secondary { fill: rgba(145,145,145,0.65); }
+        .l-leaf      { fill: rgba(105,105,105,0.68); }
+        .l-deep      { fill: rgba(170,170,170,0.50); }
+
+        .pt { fill: rgba(40,40,40,0.28); }
       }
     </style>
 
-    <!-- edge paths (reused for animateMotion) -->
-    <path id="p01"  d="M65,95  L215,42"  />
-    <path id="p02"  d="M65,95  L215,148" />
-    <path id="p03"  d="M65,95  L215,95"  />
-    <path id="p14"  d="M215,42 L400,14"  />
-    <path id="p15"  d="M215,42 L400,50"  />
-    <path id="p16"  d="M215,42 L400,90"  />
-    <path id="p27"  d="M215,148 L400,125"/>
-    <path id="p28"  d="M215,148 L400,166"/>
-    <path id="p49"  d="M400,14 L580,28"  />
-    <path id="p510" d="M400,50 L580,62"  />
+    <!-- main branches -->
+    <path id="p01" d="M62,105 L205,42"/>
+    <path id="p02" d="M62,105 L205,105"/>
+    <path id="p03" d="M62,105 L205,168"/>
+
+    <!-- software & systems -->
+    <path id="p14" d="M205,42 L390,18"/>
+    <path id="p15" d="M205,42 L390,52"/>
+    <path id="p16" d="M205,42 L390,86"/>
+
+    <!-- infrastructure -->
+    <path id="p27" d="M205,105 L390,120"/>
+    <path id="p28" d="M205,105 L390,154"/>
+    <path id="p29" d="M205,105 L390,188"/>
+
+    <!-- cybersecurity -->
+    <path id="p310" d="M205,168 L390,170"/>
+    <path id="p311" d="M205,168 L390,202"/>
+
+    <!-- deeper concepts -->
+    <path id="p412" d="M390,18 L575,10"/>
+    <path id="p413" d="M390,52 L575,42"/>
+    <path id="p414" d="M390,86 L575,76"/>
+
+    <path id="p515" d="M390,120 L575,110"/>
+    <path id="p516" d="M390,154 L575,144"/>
+
   </defs>
 
-  <!-- edges -->
-  <use href="#p01"  fill="none" stroke-width="0.6" class="e-main"/>
-  <use href="#p02"  fill="none" stroke-width="0.6" class="e-main"/>
-  <use href="#p03"  fill="none" stroke-width="0.5" class="e-main"/>
-  <use href="#p14"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p15"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p16"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p27"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p28"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p49"  fill="none" stroke-width="0.5" class="e"/>
-  <use href="#p510" fill="none" stroke-width="0.5" class="e"/>
+  <!-- ==================== EDGES ==================== -->
 
-  <!-- particles -->
-  <circle r="1.3" class="pt"><animateMotion dur="3.6s" begin="0s"    repeatCount="indefinite"><mpath href="#p01"/></animateMotion></circle>
-  <circle r="1.3" class="pt"><animateMotion dur="4.1s" begin="-1.2s" repeatCount="indefinite"><mpath href="#p02"/></animateMotion></circle>
-  <circle r="1.3" class="pt"><animateMotion dur="2.9s" begin="-0.6s" repeatCount="indefinite"><mpath href="#p03"/></animateMotion></circle>
-  <circle r="1.1" class="pt"><animateMotion dur="3.0s" begin="-0.9s" repeatCount="indefinite"><mpath href="#p14"/></animateMotion></circle>
-  <circle r="1.1" class="pt"><animateMotion dur="3.3s" begin="-1.6s" repeatCount="indefinite"><mpath href="#p15"/></animateMotion></circle>
-  <circle r="1.1" class="pt"><animateMotion dur="3.8s" begin="-0.4s" repeatCount="indefinite"><mpath href="#p16"/></animateMotion></circle>
-  <circle r="1.1" class="pt"><animateMotion dur="3.5s" begin="-1.3s" repeatCount="indefinite"><mpath href="#p27"/></animateMotion></circle>
-  <circle r="1.1" class="pt"><animateMotion dur="4.3s" begin="-2.1s" repeatCount="indefinite"><mpath href="#p28"/></animateMotion></circle>
-  <circle r="1.0" class="pt"><animateMotion dur="3.1s" begin="-0.7s" repeatCount="indefinite"><mpath href="#p49"/></animateMotion></circle>
-  <circle r="1.0" class="pt"><animateMotion dur="3.4s" begin="-1.9s" repeatCount="indefinite"><mpath href="#p510"/></animateMotion></circle>
+  <use href="#p01" fill="none" stroke-width="0.6" class="e-main"/>
+  <use href="#p02" fill="none" stroke-width="0.6" class="e-main"/>
+  <use href="#p03" fill="none" stroke-width="0.6" class="e-main"/>
 
-  <!-- nodes -->
-  <circle cx="65"  cy="95"  r="5.5" class="n-root"/>
-  <circle cx="215" cy="42"  r="4.0" class="n-primary"/>
-  <circle cx="215" cy="148" r="3.0" class="n-exploring"/>
-  <circle cx="215" cy="95"  r="2.0" class="n-secondary"/>
-  <circle cx="400" cy="14"  r="2.5" class="n-leaf"/>
-  <circle cx="400" cy="50"  r="2.5" class="n-leaf"/>
-  <circle cx="400" cy="90"  r="2.0" class="n-leaf"/>
-  <circle cx="400" cy="125" r="2.0" class="n-leaf"/>
-  <circle cx="400" cy="166" r="2.0" class="n-leaf"/>
-  <circle cx="580" cy="28"  r="1.8" class="n-deep"/>
-  <circle cx="580" cy="62"  r="1.8" class="n-deep"/>
+  <use href="#p14" fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p15" fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p16" fill="none" stroke-width="0.5" class="e"/>
 
-  <!-- labels -->
-  <text x="74"  y="99"  font-size="12"   font-weight="500" class="l-root">jual aju</text>
-  <text x="224" y="46"  font-size="10.5"               class="l-primary">systems &amp; networking</text>
-  <text x="224" y="152" font-size="10.5"               class="l-exploring">cybersecurity</text>
-  <text x="224" y="99"  font-size="10"                 class="l-secondary">web · ai/ml</text>
-  <text x="409" y="18"  font-size="10"                 class="l-leaf">tcp/ip · protocols</text>
-  <text x="409" y="54"  font-size="10"                 class="l-leaf">os internals</text>
-  <text x="409" y="94"  font-size="10"                 class="l-leaf">linux kernel</text>
-  <text x="409" y="129" font-size="10"                 class="l-leaf">network security</text>
-  <text x="409" y="170" font-size="10"                 class="l-leaf">ctf · exploitation</text>
-  <text x="588" y="32"  font-size="9.5"                class="l-deep">packet analysis</text>
-  <text x="588" y="66"  font-size="9.5"                class="l-deep">system calls</text>
+  <use href="#p27" fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p28" fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p29" fill="none" stroke-width="0.5" class="e"/>
+
+  <use href="#p310" fill="none" stroke-width="0.5" class="e"/>
+  <use href="#p311" fill="none" stroke-width="0.5" class="e"/>
+
+  <use href="#p412" fill="none" stroke-width="0.45" class="e"/>
+  <use href="#p413" fill="none" stroke-width="0.45" class="e"/>
+  <use href="#p414" fill="none" stroke-width="0.45" class="e"/>
+
+  <use href="#p515" fill="none" stroke-width="0.45" class="e"/>
+  <use href="#p516" fill="none" stroke-width="0.45" class="e"/>
+
+
+  <!-- ==================== PARTICLES ==================== -->
+
+  <circle r="1.3" class="pt">
+    <animateMotion dur="3.8s" begin="0s" repeatCount="indefinite">
+      <mpath href="#p01"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.3" class="pt">
+    <animateMotion dur="4.2s" begin="-1.3s" repeatCount="indefinite">
+      <mpath href="#p02"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.3" class="pt">
+    <animateMotion dur="3.4s" begin="-0.8s" repeatCount="indefinite">
+      <mpath href="#p03"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="3.1s" begin="-0.9s" repeatCount="indefinite">
+      <mpath href="#p14"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="3.5s" begin="-1.6s" repeatCount="indefinite">
+      <mpath href="#p15"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="3.8s" begin="-0.4s" repeatCount="indefinite">
+      <mpath href="#p16"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="3.6s" begin="-1.3s" repeatCount="indefinite">
+      <mpath href="#p27"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="4.1s" begin="-2.1s" repeatCount="indefinite">
+      <mpath href="#p28"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="4.4s" begin="-1.1s" repeatCount="indefinite">
+      <mpath href="#p29"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="3.7s" begin="-0.7s" repeatCount="indefinite">
+      <mpath href="#p310"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="1.1" class="pt">
+    <animateMotion dur="4.0s" begin="-1.8s" repeatCount="indefinite">
+      <mpath href="#p311"/>
+    </animateMotion>
+  </circle>
+
+
+  <!-- ==================== NODES ==================== -->
+
+  <!-- root -->
+  <circle cx="62" cy="105" r="5.5" class="n-root"/>
+
+  <!-- primary branches -->
+  <circle cx="205" cy="42"  r="4.0" class="n-primary"/>
+  <circle cx="205" cy="105" r="3.5" class="n-focus"/>
+  <circle cx="205" cy="168" r="3.0" class="n-secondary"/>
+
+  <!-- software & systems -->
+  <circle cx="390" cy="18" r="2.5" class="n-leaf"/>
+  <circle cx="390" cy="52" r="2.5" class="n-leaf"/>
+  <circle cx="390" cy="86" r="2.2" class="n-leaf"/>
+
+  <!-- infrastructure -->
+  <circle cx="390" cy="120" r="2.3" class="n-leaf"/>
+  <circle cx="390" cy="154" r="2.3" class="n-leaf"/>
+  <circle cx="390" cy="188" r="2.0" class="n-leaf"/>
+
+  <!-- cybersecurity -->
+  <circle cx="390" cy="170" r="2.2" class="n-leaf"/>
+  <circle cx="390" cy="202" r="2.0" class="n-leaf"/>
+
+  <!-- deeper concepts -->
+  <circle cx="575" cy="10"  r="1.7" class="n-deep"/>
+  <circle cx="575" cy="42"  r="1.7" class="n-deep"/>
+  <circle cx="575" cy="76"  r="1.7" class="n-deep"/>
+
+  <circle cx="575" cy="110" r="1.7" class="n-deep"/>
+  <circle cx="575" cy="144" r="1.7" class="n-deep"/>
+
+
+  <!-- ==================== LABELS ==================== -->
+
+  <text x="72" y="109"
+        font-size="12"
+        font-weight="500"
+        class="l-root">
+    jual aju
+  </text>
+
+  <text x="214" y="46"
+        font-size="10.5"
+        class="l-primary">
+    software &amp; systems
+  </text>
+
+  <text x="214" y="109"
+        font-size="10.5"
+        class="l-focus">
+    distributed &amp; infrastructure
+  </text>
+
+  <text x="214" y="172"
+        font-size="10.5"
+        class="l-secondary">
+    cybersecurity
+  </text>
+
+
+  <!-- software & systems leaves -->
+
+  <text x="399" y="22"
+        font-size="9.7"
+        class="l-leaf">
+    backend engineering
+  </text>
+
+  <text x="399" y="56"
+        font-size="9.7"
+        class="l-leaf">
+    operating systems
+  </text>
+
+  <text x="399" y="90"
+        font-size="9.7"
+        class="l-leaf">
+    compiler engineering
+  </text>
+
+
+  <!-- infrastructure leaves -->
+
+  <text x="399" y="124"
+        font-size="9.7"
+        class="l-leaf">
+    docker · ci/cd
+  </text>
+
+  <text x="399" y="158"
+        font-size="9.7"
+        class="l-leaf">
+    cloud-native systems
+  </text>
+
+  <text x="399" y="192"
+        font-size="9.7"
+        class="l-leaf">
+    edge computing
+  </text>
+
+
+  <!-- cybersecurity leaves -->
+
+  <text x="399" y="174"
+        font-size="9.7"
+        class="l-leaf">
+    network security
+  </text>
+
+  <text x="399" y="206"
+        font-size="9.7"
+        class="l-leaf">
+    reverse engineering
+  </text>
+
+
+  <!-- deeper concepts -->
+
+  <text x="583" y="14"
+        font-size="9.2"
+        class="l-deep">
+    apis · databases
+  </text>
+
+  <text x="583" y="46"
+        font-size="9.2"
+        class="l-deep">
+    linux · system calls
+  </text>
+
+  <text x="583" y="80"
+        font-size="9.2"
+        class="l-deep">
+    ir · gpu kernels
+  </text>
+
+  <text x="583" y="114"
+        font-size="9.2"
+        class="l-deep">
+    containers · automation
+  </text>
+
+  <text x="583" y="148"
+        font-size="9.2"
+        class="l-deep">
+    distributed pipelines
+  </text>
+
 </svg>
