@@ -1,12 +1,17 @@
 # Jual Aju
 
-CS UNDERGRAD
+### CS UNDERGRAD
 
-Interested in figuring out how systems communicate at the lowest level —
-from **network protocols** and **os internals** to the hardware underneath.
-Currently exploring **cybersecurity** as a natural extension of that foundation,
-with web and AI/ML as some side quests...
-<br>Cool fact: Curiosity pulls my work forward. The moment something clicks, it feels like sunshine lollipops and rainbows. Coffee handles the rest.
+Interested in understanding how systems work under the hood —
+from **network protocols** and **OS internals** to the infrastructure
+and hardware underneath.
+
+Currently exploring **software engineering, systems, cybersecurity,
+AI/ML systems, and distributed computing** through hands-on projects.
+
+Building things, breaking things, figuring out why they work,
+and occasionally wondering why they don't.
+
 <br>
 
 ![network](./network.svg)
@@ -15,7 +20,49 @@ with web and AI/ML as some side quests...
 
 ---
 
-WOMEN IN TECH Lead · TinkerHub - 
-Opening doors for girls who haven't found theirs yet
+### WHAT I'M EXPLORING
 
-`c` `c++` `python` `java` `javascript` `node.js` `express.js` `react` `next.js` `typescript` `opencv` `yolo` `numpy` `pandas` `mysql` `postgresql` `mongodb` `raspberry pi` `arduino` `esp32` `linux` `zsh` `bash` `git` `latex` `matlab` `obsidian` 
+**Software Engineering** · Backend Systems · Distributed Systems ·
+Operating Systems · Networking · Cybersecurity · AI/ML Systems ·
+Compiler Engineering · Edge Computing
+
+---
+
+### CURRENTLY BUILDING
+
+**SecureShip**  
+A DevSecOps platform exploring secure CI/CD, containerization,
+infrastructure, security automation, and cloud-native deployment.
+
+**AI Compiler Optimization**  
+A research-oriented ML compiler exploring computational-graph
+optimization, operator fusion, intermediate representations,
+and GPU code generation with Triton.
+
+**AI-Centric Cyber-Physical Systems**  
+Distributed edge systems combining IoT, real-time data pipelines,
+and ML inference across heterogeneous hardware.
+
+---
+
+
+**Campus Lead · TinkerHub**
+
+Opening doors for girls who haven't found theirs yet —
+through hands-on learning, technical communities, and building things
+together.
+
+---
+
+### TOOLBOX
+
+`C` `C++` `Python` `Java` `JavaScript` `TypeScript`
+`Node.js` `Express.js` `React` `Next.js`
+`FastAPI` `SQL`
+`PyTorch` `Triton`
+`PostgreSQL` `MySQL` `MongoDB`
+`Docker` `Git` `Linux` `Bash` `Zsh`
+`Raspberry Pi` `Arduino` `ESP32`
+`OpenCV` `YOLO` `NumPy` `Pandas`
+`Wireshark` `Burp Suite` `Ghidra`
+`LaTeX` `MATLAB` `Obsidian`
